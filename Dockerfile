@@ -13,3 +13,4 @@ WORKDIR /phpggc
 RUN sed -i '1s|.*|#!/usr/bin/env php|' phpggc && chmod +x phpggc && echo "phar.readonly=0" > $PHP_INI_DIR/php.ini
 
 ENTRYPOINT ["/phpggc/phpggc"]
+RUN alias composer='php /usr/bin/composer'
